@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="script.js" defer></script>
+    
   </head>
   <body>
     <div class="navbar">
-      <img src=" " alt="This is a logo" class="logo">
+      <img class="logoMAAB" src="./logoMAAB.png " alt="This is a logo" class="logo">
       <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#about" >About</a></li>
-          <li><a href="#experience">Projects</a></li>
-          <li><a href="#projects">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
           
       </ul>
@@ -23,27 +23,9 @@
     </div>
 
     
-
-    <nav id="content">
-      
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-
     <section id="profile">
       <div class="section__pic-container">
-        <img src="  " alt="M.Asad profile picture" />
+        <img class="profilePic" src="./Images/fullProfilePic.jpeg  " alt="M.Asad profile picture" />
       </div>
       <div class="section__text">
         
@@ -72,46 +54,54 @@
         intersection of creativity and technology, I am dedicated to continuous learning through hands-on experiences. 
         Open to collaborations, challenges, and new opportunities, I am excited to contribute to the ever-evolving tech 
         landscape.</p>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
 
+
+      <br>
+      <h2>Experience</h2>  
+      <br>
+      <div class="container">
+          <h3>Quantitative Analysis Intern</h3>
+          <p>South African Graduate Employers Association (SAGEA) · Internship <br>
+            Jan 2024 - Present <br>
+            South Africa</p>
+      </div>
+  
+      <div class="container">
+          <h3>Web Development Intern</h3>
+          <p>InternCareer · Internship <br>
+            Jan 2024 - Present <br>
+            Remote </p>
+      </div>
+  
+      <div class="container">
+          <h3>Newlook Cosmetics</h3>
+          <h4>Computer Technician</h4>
+          <p>Part-time 
+            Nov 2018 - Dec 2023<br>
+            Worcester, Western Cape, South Africa · Hybrid</p>
+      </div>
+    </section>
+  
+    <!-- Contact Section -->
+    <section id="contact">
+      <h1>Contact Me</h1>
+  
+      <form id="contact-form" action="submit_form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+  
+          <input type="submit" value="Submit">
+      </form>
+  
+      <div class="btn-container_contact">
+          <button id="email-button" type="button"><span></span>Email Me</button>
+      </div>
+      
+    </section>
     
