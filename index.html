@@ -57,7 +57,7 @@
 
 
       <br>
-      <h2>Experience</h2>  
+      <h2 section id="experience">Experience</h2>  
       <br>
       <div class="container">
           <h3>Quantitative Analysis Intern</h3>
@@ -85,23 +85,21 @@
     <!-- Contact Section -->
     <section id="contact">
       <h1>Contact Me</h1>
-  
       <form id="contact-form" action="submit_form.php" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-  
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-  
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-  
-          <input type="submit" value="Submit">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <input type="submit" value="Submit" name="submit"> <!-- Added name attribute -->
       </form>
-  
+
       <div class="btn-container_contact">
-          <button id="email-button" type="button"><span></span>Email Me</button>
+        <button id="email-button" type="button" onclick="emailMe()"><span></span>Email Me</button>
       </div>
-      
     </section>
     
