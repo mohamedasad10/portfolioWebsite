@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,9 +29,7 @@ a,
 
 /* DESKTOP NAV */
 
-
-
-.navbar{
+.navbar {
   font-size: 25px;
   width: 85%;
   margin: auto;
@@ -38,35 +37,34 @@ a,
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
-.navbar ul li{
+.navbar ul li {
   list-style: none;
   display: inline-block;
   margin: 0 2px;
   position: relative;
 }
 
-/*below is changing the color of the top navigation bar*/
-.navbar ul li a{ 
+/* Change the color of the top navigation bar */
+.navbar ul li a { 
   text-decoration: none;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
 
-.navbar ul li::after{
+.navbar ul li::after {
   content: '';
   height: 3px;
   width: 0;
-  background:darkcyan;
+  background: darkcyan;
   position: absolute;
   left: 0;
   bottom: -10px;
   transition: 0.5s;
 }
 
-.navbar ul li:hover::after{
+.navbar ul li:hover::after {
   width: 100%;
 }
 
@@ -83,12 +81,12 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
-.profilePic{
+.profilePic {
   height: 400px;
   border-radius: 50px;
 }
 
-.logoMAAB{
+.logoMAAB {
   width: 100px;
   height: 50px;
 }
@@ -99,14 +97,10 @@ a:hover {
   display: none;
 }
 
-
-
-
 /* SECTIONS */
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -144,14 +138,13 @@ section {
 .section__text__p1 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color:darkcyan;
+  color: darkcyan;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
 }
-
 
 /* ICONS */
 
@@ -161,7 +154,7 @@ section {
 }
 
 /* BUTTONS */
-button{
+button {
   width: 200px;
   padding: 15px;
   text-align: center;
@@ -170,14 +163,14 @@ button{
   font-weight: bold;
   border: 2px solid darkcyan;
   background: transparent;
-  color:black;
+  color: black;
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
-span{
-  background:darkcyan;
+span {
+  background: darkcyan;
   height: 100%;
   width: 0;
   border-radius: 25px;
@@ -186,27 +179,19 @@ span{
   bottom: 0;
   z-index: -1;
   transition: 0.5s;
-
 }
 
-button:hover span{
+button:hover span {
   width: 100%;
 }
 
-button:hover{
+button:hover {
   border: none;
-
 }
 
-
-
-
-
-
 /* ABOUT SECTION */
-.sectionabout_text_p1{
+.sectionabout_text_p1 {
   font-size: medium;
-  
   border-style: dotted;
   border: 20px solid #0f56a1; /* 2px width, solid style, and black color */
   padding: 10px;
@@ -214,14 +199,12 @@ button:hover{
 }
 
 .container {
-    width: 30%;
-    margin: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    float: left;
-    background-color: #f0f0f0;
+  width: 100%; /* Change to 100% to make sure containers are full-width */
+  margin: 10px 0; /* Add vertical margin for spacing */
+  padding: 20px;
+  background-color: #f0f0f0;
+  clear: both; /* Clear floats to prevent side-by-side display */
 }
-
 
 /* CONTACT SECTION */
 
