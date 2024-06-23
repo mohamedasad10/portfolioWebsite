@@ -213,6 +213,56 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
+
+/* Education Section *********************************************************************************/
+/* Education Section */
+#education {
+  padding-top: 4vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+#education .education-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #fff; /* Set background to white */
+  border: 1px solid #ddd; /* Optional: Add a border to distinguish the block */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for depth */
+}
+
+#education .info {
+  width: 70%; /* Adjust width as necessary */
+}
+
+#education .logo {
+  width: 30%; /* Adjust width as necessary */
+  text-align: right;
+}
+
+#education .logo img {
+  max-width: 100px; /* Adjust size as necessary */
+  height: auto;
+}
+
+#education h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+#education p {
+  margin: 5px 0;
+  color: rgb(85, 85, 85);
+}
+
+#education strong {
+  font-weight: 600;
+}
+
+
 /* CONTACT SECTION ******************************************************************************/
 
 #contact {
