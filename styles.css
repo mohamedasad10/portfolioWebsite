@@ -193,6 +193,13 @@ button:hover {
   border: none;
 }
 
+
+
+
+
+
+
+
 /* ABOUT SECTION **********************************************************************************/
 .sectionabout__text__p1 {
   font-size: medium;
@@ -213,8 +220,12 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
+/*EXPERIENCE SECTION*/
+
+
 
 /* Education Section *********************************************************************************/
+/* Education Section */
 /* Education Section */
 #education {
   padding-top: 4vh;
@@ -261,6 +272,49 @@ button:hover {
 #education strong {
   font-weight: 600;
 }
+
+.education-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-row .education-container {
+  width: 32%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    font-size: 20px;
+  }
+
+  section {
+    margin: 0 2rem;
+  }
+
+  #profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    margin: 20px 0;
+  }
+
+  #contact form {
+    width: 80%;
+  }
+
+  .education-row {
+    flex-direction: column;
+  }
+
+  .education-row .education-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 
 
 /* CONTACT SECTION ******************************************************************************/
