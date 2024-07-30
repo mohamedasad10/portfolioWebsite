@@ -88,7 +88,10 @@ a:hover {
   height: 400px; /* Set a fixed height */
   object-fit: cover; /* Ensure the image covers the entire container */
   border-radius: 50%; /* Make the profile picture circular */
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); /* Add a more pronounced shadow around the circle */
 }
+
+
 
 .logoMAAB {
   width: 100px;
@@ -224,9 +227,8 @@ button:hover {
 
 
 
-/* Education Section *********************************************************************************/
-/* Education Section */
-/* Education Section */
+/******** Education Section *********************************************************************************/
+
 #education {
   padding-top: 4vh;
   margin: 0 10rem;
