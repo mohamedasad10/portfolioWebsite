@@ -30,3 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("contact-form").addEventListener("submit", submitForm);
   document.getElementById("email-button").addEventListener("click", emailMe);
 });
+
+
+
+
+
+  
