@@ -14,10 +14,6 @@ Enhanced the user interface with customized styles and layouts.
 Implemented client-side logic for dynamic content and user interactions.
 Utilized to fetch and display blog posts, handle form submissions, and update the UI dynamically.
 
-User Interaction:
-Form Submission:
-Implemented a form to allow users to submit new blog posts.
-Utilized JavaScript to handle form submissions and interact with the server.
 Styling:
 CSS:
 Defined styles for a visually appealing and responsive user interface.
