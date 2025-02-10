@@ -7,27 +7,72 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <style>
+      /* Add hover animations */
+      .navbar ul li a:hover,
+      .btn:hover,
+      .project-card:hover,
+      .experience-item:hover,
+      .education-container:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Contact form functionality */
+      #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      #contact-form input,
+      #contact-form textarea {
+        padding: 0.75rem;
+        border: 2px solid #64ffda;
+        border-radius: 5px;
+        background-color: transparent;
+        color: #ccd6f6;
+        font-size: 1rem;
+      }
+
+      #contact-form input[type="submit"] {
+        background-color: #64ffda;
+        color: #0a192f;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      #contact-form input[type="submit"]:hover {
+        background-color: #52d1b2;
+      }
+    </style>
   </head>
   <body>
     <div class="navbar">
-      <img class="logoMAAB" src="./logoMAAB.png" alt="This is a logo" class="logo">
+      <img class="logoMAAB" src="/Images/logoMAAB.png" alt="This is a logo" class="logo">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
-  
     <section id="profile">
       <div class="section__pic-container">
         <img class="profilePic" src="./Images/ProfilePic.jpeg" alt="M.Asad profile picture" />
       </div>
       <div class="section__text">
         <h1 class="title">Mohamed Asad Azim Bandarkar</h1>
-        <p class="section__text__p1">Computer Science Student</p>
+        <p class="section__text__p1">BSc (Hons) Computer Science Student</p>
         <div class="btn-container">
           <button type="button" onclick="location.href='https://www.linkedin.com/in/mabandarkar/'"><span></span>LinkedIn</button>
           <button type="button" onclick="location.href='https://github.com/mohamedasad10'"><span></span>Github</button>
@@ -42,10 +87,8 @@
     </section>
 
     <!---Experience Section--->
-
     <section id="experience">
       <h1 class="title">Experience</h1>
-    
       <div class="container">
         <div class="experience-item">
           <div class="experience-content">
@@ -64,8 +107,6 @@
           </div>
         </div>
       </div>
-    
-  
 
       <!-- Secretary-General at UWC IT Society -->
       <div class="container">
@@ -84,7 +125,6 @@
             </ul>
           </div>
           <div class="experience-logo">
-            <!-- Add logo specific to this role if available -->
             <img src="Images/uwc.it.society logo.jpg" alt="UWC IT Society Logo">
           </div>
         </div>
@@ -95,7 +135,7 @@
         <div class="experience-item">
           <div class="experience-content">
             <h3>ABSA iNkanyezi IT, Cyber Security and Audit Academy</h3>
-            <p>Absa Group · Mar 2024 - Present <br>
+            <p>Absa Group · Mar 2024 - Sept 2024 <br>
             Remote</p>
             <ul>
               <li>Comprehensive professional development program focusing on risk management, technology controls, data analytics, cybersecurity fundamentals, and soft skills.</li>
@@ -103,7 +143,6 @@
             </ul>
           </div>
           <div class="experience-logo">
-            <!-- Add logo specific to this role if available -->
             <img src="Images/absa.png" alt="ABSA Logo">
           </div>
         </div>
@@ -126,26 +165,7 @@
             </ul>
           </div>
           <div class="experience-logo">
-            <!-- Add logo specific to this role if available -->
             <img src="Images/uwclogo.png" alt="UWC Logo">
-          </div>
-        </div>
-      </div>
-
-      <!-- Web Development Intern at InternCareer -->
-      <div class="container">
-        <div class="experience-item">
-          <div class="experience-content">
-            <h3>Web Development Intern</h3>
-            <p>InternCareer · Jan 2024 - Feb 2024 · 2 mos <br>
-            Project-based internship</p>
-            <ul>
-              <li>Engaged in designing and building websites, utilizing front-end and back-end technologies for user-friendly web applications.</li>
-            </ul>
-          </div>
-          <div class="experience-logo">
-            <!-- Add logo specific to this role if available -->
-            <img src="Images/interncareers_logo.jpg" alt="InternCareer Logo">
           </div>
         </div>
       </div>
@@ -165,7 +185,6 @@
             </ul>
           </div>
           <div class="experience-logo">
-            <!-- Add logo specific to this role if available -->
             <img src="Images/south_african_graduate_employers_association_logo.jpg" alt="SAGEA Logo">
           </div>
         </div>
@@ -188,32 +207,41 @@
             </ul>
           </div>
           <div class="experience-logo">
-            <!-- Add logo specific to this role if available -->
             <img src="Images/NewLookLogo.jpg" alt="NEWLOOK COSMETICS Logo">
           </div>
         </div>
-      </div>    
+      </div>
     </section>
 
-    <!-- Education Section ------------------------------------------------------------------------>
+    <!-- Education Section -->
     <section id="education">
       <h1 class="title">Education</h1>
-    
+      <div class="education-container">
+        <div class="info">
+          <h3>University of the Western Cape</h3>
+          <p>Bachelor of Science Honours Computer Science <br>
+            Feb 2025 - Nov 2025</p>
+           </div>
+        <div class="logo">
+          <img src="./Images/uwclogo.png" alt="UWC Logo">
+        </div>
+      </div>
+
       <div class="education-container">
         <div class="info">
           <h3>University of the Western Cape</h3>
           <p>Bachelor of Science, Computer Science and Information Systems<br>
             Feb 2022 - Nov 2024</p>
-          <br>
+          
           <p><strong>Activities and societies:</strong> UWC IT Society Secretary, Computer Science Tutor, Muslim Student Association (MSA UWC), Golden Key International Honor Society (GKSA)</p>
-          <br>
+          
           <p><strong>Skills:</strong> Information Systems, Java, GitHub, Project Management, ARM Assembly, Business Analysis, HTML5, Python (Programming Language)</p>
         </div>
         <div class="logo">
           <img src="./Images/uwclogo.png" alt="UWC Logo">
         </div>
       </div>
-    
+
       <div class="education-row">
         <div class="education-container">
           <div class="info">
@@ -225,7 +253,7 @@
             <img src="./Images/oraclelogo.png" alt="Oracle Logo">
           </div>
         </div>
-    
+
         <div class="education-container">
           <div class="info">
             <h3>Madina Institute</h3>
@@ -236,7 +264,7 @@
             <img src="./Images/madinainstitute.png" alt="Madina Institute Logo">
           </div>
         </div>
-    
+
         <div class="education-container">
           <div class="info">
             <h3>Rylands Primary School</h3>
@@ -249,26 +277,37 @@
       </div>
     </section>
 
-    <!--Projects Section -------------------------------------------------------------------------->
-    
-    
-
-    <!--HealthCareAI Chatbot-->
+    <!--Projects Section ---------------------------------------------------------------------------------------------------------------->
     <section id="projects">
       <h1 class="title">Projects</h1>
+      <div class="project-card">
+        <img src="Images/feedemnow-logo-2.png" alt="Feedem Logo">
+        <div class="project-details">
+          <h3>Feedem Application</h3>
+          <p>Feedem Now is a web-based food ordering platform designed specifically for students. The app helps students save time by allowing
+            them to pre-order meals, avoiding long lines and unnecessary delays that could lead to missing classes.</p>
+          <a href="https://github.com/mohamedasad10/FeedemNow/tree/main" class="btn" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Images/FintionLogo.jpg" alt="Fintion Logo" style="width: 300px; height: 250px; margin-right: 220px;">
+        <div class="project-details">
+          <h3>Fintion Bank</h3>
+          <p>BankingApp 💰 | A Java-based banking app showcasing OOP principles with secure transactions.  🔹 Features: ✅ Account management ✅ Deposits & withdrawals ✅ Fund transfers ✅ Transaction history  🚀 Tech Stack: Java, OOP, Collections</p>
+          <a href="https://github.com/mohamedasad10/FeedemNow/tree/main" class="btn" target="_blank">View Project</a>
+        </div>
+      </div>
+
       <div class="project-card">
         <img src="Images/healthcareChatbot.png" alt="Healthcare Chatbot">
         <div class="project-details">
           <h3>HealthcareAI Chatbot</h3>
           <p>This project is a healthcare chatbot designed to assist users with various healthcare-related inquiries. It includes features like appointment scheduling, emotional support, health updates, and a sickness predictor. You can interact with the chatbot to get personalized responses and guidance.</p>
-          <a href="https://mohamedasad10.github.io/personalHealthCareChatBot/" class="btn" target="_blank">View Project</a>
+          <a href="https://mohamedasad10.github.io/HealthCareChatBot/" class="btn" target="_blank">View Project</a>
         </div>
       </div>
-    </section>
 
-    <!--SungeSMokehouse-->
-
-    <section>
       <div class="project-card">
         <img src="Images/SungeSmokehouseWebsite.png" alt="SungeSmokehouse">
         <div class="project-details">
@@ -277,11 +316,7 @@
           <a href="https://mohamedasad10.github.io/SungeSmokehouse/" class="btn" target="_blank">View Project</a>
         </div>
       </div>
-    </section>
-    
-    <!--Certificates Portfolio-->
 
-    <section>
       <div class="project-card">
         <img src="Images/CertificatePortfolio.png" alt="Certificate Portfolio">
         <div class="project-details">
@@ -289,22 +324,47 @@
           <p>This project is a comprehensive portfolio showcasing my professional and academic certificates. It is designed to present my achievements in an organized and visually appealing manner. Built using HTML, CSS, and JavaScript, the portfolio ensures a seamless and engaging browsing experience for recruiters and visitors.</p>
           <a href="https://mohamedasad10.github.io/Certificates-Portfolio/" class="btn" target="_blank">View Project</a>
         </div>
-      </div>      
+      </div>
+
     </section>
 
-    <!--Feedem Project-->
-    <section>
-      <div class="project-card">
-        <img src="Images/CertificatePortfolio.png" alt="Feedem Logo">
-        <div class="project-details">
-          <h3>Feedem Application</h3>
-          <p>Full Stack Application in progress...</p>
-          <a href="" class="btn" target="_blank">View Project</a>
+    <!-- Volunteer Section -->
+    <section id="volunteer">
+      <h1 class="title">Volunteer Work</h1>
+
+      <div class="volunteer-container">
+        <div class="volunteer-item">
+          <div class="volunteer-content">
+            <h3>School Outreach Program</h3>
+            <p>WebMax Solution (Pty) Ltd · Sept 2024 - Present</p>
+            <ul>
+              <li>Organized and led workshops on digital literacy for underprivileged communities.</li>
+              <li>Assisted in fundraising events to support local education initiatives.</li>
+              <li>Mentored students in basic computer skills and coding fundamentals.</li>
+            </ul>
+          </div>
+          <div class="volunteer-logo">
+            <img src="Images/webmax.jpg" alt="WebMax Logo">
+          </div>
+        </div>
+
+        <div class="volunteer-item">
+          <div class="volunteer-content">
+            <h3>SAIS '24 Volunteer</h3>
+            <p>SA Innovation Summit · Aug 2024 - Sept 2024</p>
+            <ul>
+              <li>The SA Innovation Summit as an annual ﬂagship event on the South African Innovation Calendar, is a platform for nurturing, developing and showcasing African innovation, 
+                as well as facilitating innovation thought-leadership. </li>
+            </ul>
+          </div>
+          <div class="volunteer-logo">
+            <img src="Images/sa_innovation_summitlogo.jpg" alt="SA InnovationSummit Logo">
+          </div>
         </div>
       </div>
     </section>
-    
-    <!-- Contact Section --------------------------------------------------------------------------->
+
+    <!-- Contact Section -->
     <section id="contact">
       <h1>Contact Me</h1>
       <form id="contact-form" action="submit_form.php" method="post">
@@ -320,18 +380,55 @@
         <button id="email-button" type="button" onclick="emailMe()"><span></span>Email Me</button>
       </div>
     </section>
+
+    
+     
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Mohamed Asad Bandarkar. All Rights Reserved.</p>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/mohamedasad" target="_blank"><img src="Images/linkedinLogo.png" alt="LinkedIn"></a>
+          <a href="https://github.com/mohamedasad10" target="_blank"><img src="Images/githubLogo.png" alt="GitHub"></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Functionality for the contact form
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+          alert(`Thank you, ${name}! Your message has been sent.`);
+          document.getElementById('contact-form').reset();
+        } else {
+          alert('Please fill out all fields.');
+        }
+      });
+
+      // Functionality for the "Email Me" button
+      function emailMe() {
+        window.location.href = 'mailto:mohamedasad@example.com';
+      }
+
+      // Add hover effects to all interactive elements
+      const interactiveElements = document.querySelectorAll(
+        '.navbar ul li a, .btn, .project-card, .experience-item, .education-container'
+      );
+
+      interactiveElements.forEach((element) => {
+        element.addEventListener('mouseenter', () => {
+          element.style.transform = 'translateY(-5px)';
+        });
+        element.addEventListener('mouseleave', () => {
+          element.style.transform = 'translateY(0)';
+        });
+      });
+    </script>
   </body>
 </html>
-
-<!--FOOTER-->
-
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2024 Mohamed Asad Bandarkar. All Rights Reserved.</p>
-    <div class="social-media">
-      <a href="https://www.linkedin.com/in/mohamedasad" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://github.com/mohamedasad10" target="_blank"><img src="Images/github.png" alt="GitHub"></a>
-      <!--<a href="https://twitter.com/mohamedasad" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>-->
-    </div>
-  </div>
-</footer>
