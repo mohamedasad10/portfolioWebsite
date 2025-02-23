@@ -19,4 +19,6 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Add the base configuration for GitHub Pages deployment
+  base: '/portfolioWebsite/',  // Replace 'your-repository-name' with your actual repository name
 }));
