@@ -28,7 +28,7 @@ const Index = () => {
         }`}
       >
         <div className="container flex items-center justify-between">
-          <img src="Images/logoMAAB.png" alt="MAAB" className="h-8" />
+          <img src="src/Images/logoMAAB.png" alt="MAAB" className="h-8" />
           <div className="hidden md:flex items-center gap-8">
             {["About", "Experience", "Education", "Projects", "Volunteer", "Contact"].map(
               (item) => (
@@ -88,7 +88,7 @@ const Index = () => {
               className="flex justify-center"
             >
               <img
-                src="Images/ProfilePic.jpeg"
+                src="src/Images/ProfilePic.jpeg"
                 alt="Mohamed Asad"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl"
               />
@@ -128,7 +128,7 @@ const Index = () => {
                     "Address questions and explained IT concepts to students, ensuring a clear understanding of the material.",
                     "Encourage a collaborative and inclusive learning environment, promoting diversity in the tech community."
                   ],
-                  logo: "Images/uwc.it.society logo.jpg"
+                  logo: "src/Images/uwc.it.society logo.jpg"
                 },
                 {
                   title: "Secretary-General",
@@ -143,7 +143,7 @@ const Index = () => {
                     "Liaise with internal departments and external stakeholders to facilitate communication and collaboration.",
                     "Contribute to strategic planning and decision-making processes as a key member of the leadership team."
                   ],
-                  logo: "Images/uwc.it.society logo.jpg"
+                  logo: "src/Images/uwc.it.society logo.jpg"
                 },
                 {
                   title: "ABSA iNkanyezi IT, Cyber Security and Audit Academy",
@@ -169,7 +169,7 @@ const Index = () => {
                     "Provide consultation to students, addressing their academic queries and offering tailored guidance.",
                     "Assist with administrative tasks."
                   ],
-                  logo: "Images/uwclogo.png"
+                  logo: "src/Images/uwclogo.png"
                 },
                 {
                   title: "QuantifyYourFuture Virtual Internship",
@@ -182,7 +182,7 @@ const Index = () => {
                     "Developed core skills including critical thinking, creativity, collaboration & communication.",
                     "Participated in team-based projects facilitated by major financial institutions."
                   ],
-                  logo: "Images/south_african_graduate_employers_association_logo.jpg"
+                  logo: "src/Images/south_african_graduate_employers_association_logo.jpg"
                 },
                 {
                   title: "Computer Technician",
@@ -197,7 +197,7 @@ const Index = () => {
                     "Replace outdated hardware components.",
                     "Collaborate with team members to troubleshoot and resolve hardware and software issues."
                   ],
-                  logo: "Images/NewLookLogo.jpg"
+                  logo: "src/Images/NewLookLogo.jpg"
                 }
               ].map((exp, index) => (
                 <motion.div
@@ -238,7 +238,7 @@ const Index = () => {
                   school: "University of the Western Cape",
                   degree: "Bachelor of Science Honours Computer Science",
                   period: "Feb 2025 - Nov 2025",
-                  logo: "Images/uwclogo.png"
+                  logo: "src/Images/uwclogo.png"
                 },
                 {
                   school: "University of the Western Cape",
@@ -246,24 +246,24 @@ const Index = () => {
                   period: "Feb 2022 - Nov 2024",
                   activities: "UWC IT Society Secretary, Computer Science Tutor, Muslim Student Association (MSA UWC), Golden Key International Honor Society (GKSA)",
                   skills: "Information Systems, Java, GitHub, Project Management, ARM Assembly, Business Analysis, HTML5, Python",
-                  logo: "Images/uwclogo.png"
+                  logo: "src/Images/uwclogo.png"
                 },
                 {
                   school: "The Oracle Academy High School",
                   degree: "National Senior Certificate",
                   period: "Jan 2017 - Dec 2021",
-                  logo: "Images/oraclelogo.png"
+                  logo: "src/Images/oraclelogo.png"
                 },
                 {
                   school: "Madina Institute",
                   degree: "Part-time religious studies",
                   period: "Mar 2017 - June 2017",
-                  logo: "Images/madinainstitute.png"
+                  logo: "src/Images/madinainstitute.png"
                 },
                 {
                   school: "Rylands Primary School",
                   period: "Jan 2010 - Dec 2016",
-                  logo: "Images/rpsLogo.jpg"
+                  logo: "src/Images/rpsLogo.jpg"
                 }
               ].map((edu, index) => (
                 <motion.div
@@ -308,31 +308,31 @@ const Index = () => {
                 {
                   title: "Feedem Application",
                   description: "Feedem Now is a web-based food ordering platform designed specifically for students. The app helps students save time by allowing them to pre-order meals, avoiding long lines and unnecessary delays that could lead to missing classes.",
-                  image: "Images/feedemnow-logo-2.png",
+                  image: "src/Images/feedemnow-logo-2.png",
                   link: "https://github.com/mohamedasad10/FeedemNow/tree/main"
                 },
                 {
                   title: "Fintion Bank",
                   description: "BankingApp 💰 | A Java-based banking app showcasing OOP principles with secure transactions. Features: Account management, Deposits & withdrawals, Fund transfers, Transaction history. Tech Stack: Java, OOP, Collections",
-                  image: "Images/FintionLogo.jpg",
+                  image: "src/Images/FintionLogo.jpg",
                   link: "https://github.com/mohamedasad10/FeedemNow/tree/main"
                 },
                 {
                   title: "HealthcareAI Chatbot",
                   description: "This project is a healthcare chatbot designed to assist users with various healthcare-related inquiries. It includes features like appointment scheduling, emotional support, health updates, and a sickness predictor.",
-                  image: "Images/healthcareChatbot.png",
+                  image: "src/Images/healthcareChatbot.png",
                   link: "https://mohamedasad10.github.io/HealthCareChatBot/"
                 },
                 {
                   title: "Sunge Smokehouse",
                   description: "This project is a website for the food outlet SungeSmokehouse, built using HTML, CSS, and JavaScript. The website showcases the variety of delicious food offerings from SungeSMokehouse, providing users with an engaging and visually appealing browsing experience.",
-                  image: "Images/SungeSmokehouseWebsite.png",
+                  image: "src/Images/SungeSmokehouseWebsite.png",
                   link: "https://mohamedasad10.github.io/SungeSmokehouse/"
                 },
                 {
                   title: "Certificate Portfolio",
                   description: "This project is a comprehensive portfolio showcasing my professional and academic certificates. It is designed to present my achievements in an organized and visually appealing manner.",
-                  image: "Images/CertificatePortfolio.png",
+                  image: "src/Images/CertificatePortfolio.png",
                   link: "https://mohamedasad10.github.io/Certificates-Portfolio/"
                 }
               ].map((project, index) => (
@@ -379,7 +379,7 @@ const Index = () => {
                     "Assisted in fundraising events to support local education initiatives.",
                     "Mentored students in basic computer skills and coding fundamentals."
                   ],
-                  logo: "Images/webmax.jpg"
+                  logo: "src/Images/webmax.jpg"
                 },
                 {
                   title: "SAIS '24 Volunteer",
@@ -388,7 +388,7 @@ const Index = () => {
                   duties: [
                     "The SA Innovation Summit as an annual flagship event on the South African Innovation Calendar, is a platform for nurturing, developing and showcasing African innovation, as well as facilitating innovation thought-leadership."
                   ],
-                  logo: "Images/sa_innovation_summitlogo.jpg"
+                  logo: "src/Images/sa_innovation_summitlogo.jpg"
                 }
               ].map((vol, index) => (
                 <motion.div
