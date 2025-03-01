@@ -330,10 +330,10 @@ const Index = () => {
                   link: "https://mohamedasad10.github.io/SungeSmokehouse/"
                 },
                 {
-                  title: "Certificate Portfolio",
-                  description: "This project is a comprehensive portfolio showcasing my professional and academic certificates. It is designed to present my achievements in an organized and visually appealing manner.",
-                  image: "/portfolioWebsite/Images/CertificatePortfolio.png",
-                  link: "https://mohamedasad10.github.io/Certificates-Portfolio/"
+                  title: "Family Tree",
+                  description: " ",
+                  image: "",
+                  link: "https://github.com/mohamedasad10/familyTree"
                 }
               ].map((project, index) => (
                 <motion.div
