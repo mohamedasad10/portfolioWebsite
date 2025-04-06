@@ -35,6 +35,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#extracurricular">Extracurricular Activities</a></li>
                     <li><a href="#honors">Awards</a></li>
@@ -300,6 +301,534 @@
       </div>
   </div>
 </section>
+
+<!-- PROJECTS Section -->
+<style>
+    /* Projects Section Styles */
+    .projects {
+        background-color: var(--bg-color);
+        padding: 100px 0;
+    }
+    
+    .projects-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .project-card {
+        background-color: var(--bg-color-lighter);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+    }
+    
+    .project-card:hover .project-image img {
+        transform: scale(1.1);
+    }
+    
+    .project-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .project-header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+    
+    .project-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+    }
+    
+    .project-logo img {
+        width: 85%;
+        height: 85%;
+        object-fit: contain;
+    }
+    
+    .project-title {
+        flex-grow: 1;
+    }
+    
+    .project-title h3 {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+    }
+    
+    .project-title .project-status {
+        display: inline-block;
+        padding: 3px 8px;
+        background-color: rgba(0, 230, 118, 0.1);
+        color: var(--primary-color);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .project-description {
+        color: var(--text-color-light);
+        margin-bottom: 20px;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: auto;
+    }
+    
+    .project-tag {
+        background-color: rgba(0, 230, 118, 0.1);
+        color: var(--primary-color);
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+    
+    /* Project Modal Styles */
+    .modal-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .modal-container.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .modal {
+        background-color: var(--bg-color-lighter);
+        width: 90%;
+        max-width: 1000px;
+        max-height: 90vh;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        position: relative;
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .modal-container.active .modal {
+        transform: scale(1);
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: var(--text-color);
+        cursor: pointer;
+        z-index: 10;
+        transition: var(--transition);
+    }
+    
+    .modal-close:hover {
+        color: var(--primary-color);
+        transform: rotate(90deg);
+    }
+    
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    /* Carousel Styles */
+    .modal-carousel {
+        width: 100%;
+        position: relative;
+        background-color: var(--bg-color);
+    }
+    
+    .carousel-container {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    
+    .carousel-slide.active {
+        opacity: 1;
+    }
+    
+    .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: var(--bg-color);
+    }
+    
+    .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    
+    .carousel-indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .carousel-indicator.active {
+        background-color: var(--primary-color);
+    }
+    
+    /* Modal Info Styles */
+    .modal-info {
+        padding: 30px;
+    }
+    
+    .modal-title {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+    }
+    
+    .modal-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .modal-status {
+        display: inline-block;
+        padding: 3px 10px;
+        background-color: rgba(0, 230, 118, 0.1);
+        color: var(--primary-color);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .modal-description {
+        color: var(--text-color-light);
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .modal-description p {
+        margin-bottom: 15px;
+    }
+    
+    .modal-description ul {
+        margin-bottom: 15px;
+        padding-left: 20px;
+    }
+    
+    .modal-description ul li {
+        margin-bottom: 8px;
+    }
+    
+    .modal-links {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .modal-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 15px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        text-decoration: none;
+    }
+    
+    .modal-link:hover {
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+    }
+    
+    .modal-link i {
+        font-size: 1.2rem;
+    }
+    
+    .modal-technologies {
+        margin-top: 20px;
+    }
+    
+    .modal-technologies h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
+    
+    .modal-tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .modal-tech-tag {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Make modal responsive */
+    @media screen and (min-width: 768px) {
+        .modal-content {
+            flex-direction: row;
+        }
+        
+        .modal-carousel, .modal-info {
+            width: 50%;
+        }
+        
+        .carousel-container {
+            height: 100%;
+            min-height: 400px;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .carousel-container {
+            height: 40vh;
+        }
+        
+        .projects-cards {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+    }
+    </style>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-cards">
+                <!-- Fintion Banking -->
+                <div class="project-card reveal-bottom" data-project="fintion-banking">
+                    <div class="project-image">
+                        <img src="images/projects/fintion-banking.jpg" alt="Fintion Banking App">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-logo">
+                                <img src="images/projects/fintion-logo.png" alt="Fintion Logo">
+                            </div>
+                            <div class="project-title">
+                                <h3>Fintion Banking</h3>
+                                <span class="project-status">Public</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            Fintion Banking App 💳 | A full-stack banking app with secure transactions and account management. Features: Account creation & management, Deposits, withdrawals, and fund transfers.
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Immersive Technologies -->
+                <div class="project-card reveal-bottom" data-project="immersive-tech">
+                    <div class="project-image">
+                        <img src="images/projects/immersive-tech.jpg" alt="Immersive Technologies">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-logo">
+                                <img src="images/projects/immersive-logo.png" alt="Immersive Tech Logo">
+                            </div>
+                            <div class="project-title">
+                                <h3>Immersive Technologies</h3>
+                                <span class="project-status">Public</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            Portfolio for Virtual Reality(VR)🕶️and Augmented Reality(AR). Showcasing immersive experiences and interactive applications.
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">AR</span>
+                            <span class="project-tag">VR</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Feedem Now -->
+                <div class="project-card reveal-bottom" data-project="feedem-now">
+                    <div class="project-image">
+                        <img src="images/projects/feedem-now.jpg" alt="Feedem Now">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-logo">
+                                <img src="images/projects/feedem-logo.png" alt="Feedem Now Logo">
+                            </div>
+                            <div class="project-title">
+                                <h3>Feedem Now</h3>
+                                <span class="project-status">Public</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            Feedem Now is a web-based food ordering platform designed specifically for students🍕🍔. The app helps students save time by allowing them to pre-order meals, avoiding long lines and unnecessary delays.
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Traffic Lights Simulator -->
+                <div class="project-card reveal-bottom" data-project="traffic-lights">
+                    <div class="project-image">
+                        <img src="images/projects/traffic-lights.jpg" alt="Traffic Lights Simulator">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-logo">
+                                <img src="images/projects/raspberry-pi-logo.png" alt="Raspberry Pi Logo">
+                            </div>
+                            <div class="project-title">
+                                <h3>Traffic Lights Simulator</h3>
+                                <span class="project-status">Public</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            Practical implementation of traffic light control🚗🚦 using a Raspberry Pi, integrating networking concepts to simulate real-world scenarios. Explore how traffic light operations🚥 can be coordinated.
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Raspberry Pi</span>
+                            <span class="project-tag">IoT</span>
+                        </div>
+                    </div>
+                </div>
+    
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal Container -->
+    <div class="modal-container" id="project-modal">
+        <div class="modal">
+            <div class="modal-close">&times;</div>
+            <div class="modal-content">
+                <div class="modal-carousel">
+                    <div class="carousel-container">
+                        <!-- Images will be dynamically inserted here -->
+                    </div>
+                    <div class="carousel-indicators">
+                        <!-- Indicators will be dynamically inserted here -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 class="modal-title">Project Title</h2>
+                    <div class="modal-status">Public</div>
+                    <div class="modal-links">
+                        <a href="#" class="modal-link github-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="modal-link demo-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                    <div class="modal-description">
+                        <!-- Description will be dynamically inserted here -->
+                    </div>
+                    <div class="modal-technologies">
+                        <h4>Technologies Used</h4>
+                        <div class="modal-tech-tags">
+                            <!-- Tech tags will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
 <!-- Skills Section -->
 <section id="skills" class="skills section-padding">

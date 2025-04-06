@@ -514,3 +514,354 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide = index;
     }
 });
+
+//
+// PROJECT SECTION
+// Project Modal and Carousel Functionality
+//
+document.addEventListener('DOMContentLoaded', function() {
+    // Project data with images and descriptions
+    const projectData = {
+        'fintion-banking': {
+            title: 'Fintion Banking',
+            status: 'Public',
+            github: 'https://github.com/yourusername/FintionBanking',
+            demo: 'https://fintion-banking-demo.example.com',
+            images: [
+                'images/projects/fintion-banking/screenshot1.jpg',
+                'images/projects/fintion-banking/screenshot2.jpg',
+                'images/projects/fintion-banking/screenshot3.jpg',
+                'images/projects/fintion-banking/screenshot4.jpg'
+            ],
+            description: `
+                <p>Fintion Banking is a full-stack banking application that provides secure transactions and comprehensive account management features.</p>
+                
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Secure user authentication and authorization</li>
+                    <li>Account creation and management</li>
+                    <li>Deposits, withdrawals, and fund transfers between accounts</li>
+                    <li>Transaction history and account statements</li>
+                    <li>Bill payments and scheduled transfers</li>
+                    <li>Real-time balance updates and notifications</li>
+                    <li>Admin dashboard for account management and oversight</li>
+                </ul>
+                
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>PHP backend with MVC architecture</li>
+                    <li>MySQL database for secure data storage</li>
+                    <li>JavaScript for dynamic frontend interactions</li>
+                    <li>AJAX for asynchronous data loading</li>
+                    <li>Responsive design for all device sizes</li>
+                    <li>Security features including prepared statements, input validation, and CSRF protection</li>
+                </ul>
+                
+                <p>This project demonstrates my ability to create secure, full-stack applications with complex business logic and database interactions.</p>
+            `,
+            technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'AJAX', 'jQuery', 'Bootstrap']
+        },
+        'immersive-tech': {
+            title: 'Immersive Technologies',
+            status: 'Public',
+            github: 'https://github.com/yourusername/Immersive-Technologies',
+            demo: 'https://immersive-tech-demo.example.com',
+            images: [
+                'images/projects/immersive-tech/screenshot1.jpg',
+                'images/projects/immersive-tech/screenshot2.jpg',
+                'images/projects/immersive-tech/screenshot3.jpg',
+                'images/projects/immersive-tech/screenshot4.jpg'
+            ],
+            description: `
+                <p>This portfolio showcases my work in Virtual Reality (VR) and Augmented Reality (AR) technologies, demonstrating immersive experiences and interactive applications.</p>
+                
+                <p><strong>Project Highlights:</strong></p>
+                <ul>
+                    <li>AR educational application that brings textbook content to life</li>
+                    <li>VR campus tour for prospective university students</li>
+                    <li>Interactive AR product visualization for e-commerce</li>
+                    <li>VR training simulation for industrial safety procedures</li>
+                    <li>AR navigation system for indoor spaces</li>
+                </ul>
+                
+                <p><strong>Technical Details:</strong></p>
+                <ul>
+                    <li>Developed using Unity3D with C# scripting</li>
+                    <li>AR implementations using ARCore and ARKit</li>
+                    <li>VR experiences optimized for Oculus and SteamVR platforms</li>
+                    <li>3D modeling and texturing using Blender and 3ds Max</li>
+                    <li>Performance optimization for mobile AR applications</li>
+                </ul>
+                
+                <p>This collection demonstrates my skills in creating engaging and interactive immersive experiences across multiple platforms and use cases.</p>
+            `,
+            technologies: ['Unity', 'C#', 'AR', 'VR', 'ARCore', 'ARKit', 'Blender', '3ds Max', 'Oculus SDK']
+        },
+        'feedem-now': {
+            title: 'Feedem Now',
+            status: 'Public',
+            github: 'https://github.com/yourusername/FeedemNow',
+            demo: 'https://feedem-now-demo.example.com',
+            images: [
+                'images/projects/feedem-now/screenshot1.jpg',
+                'images/projects/feedem-now/screenshot2.jpg',
+                'images/projects/feedem-now/screenshot3.jpg',
+                'images/projects/feedem-now/screenshot4.jpg'
+            ],
+            description: `
+                <p>Feedem Now is a web-based food ordering platform designed specifically for university students, helping them save time by pre-ordering meals and avoiding long cafeteria lines.</p>
+                
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>User-friendly menu browsing with filtering options</li>
+                    <li>Secure account creation and management</li>
+                    <li>Order customization and special instructions</li>
+                    <li>Multiple payment options including student card integration</li>
+                    <li>Order tracking and notifications</li>
+                    <li>Scheduled orders for regular meal planning</li>
+                    <li>Vendor dashboard for order management</li>
+                    <li>Analytics for popular items and peak ordering times</li>
+                </ul>
+                
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>PHP backend with RESTful API architecture</li>
+                    <li>MySQL database for data storage</li>
+                    <li>JavaScript frontend with responsive design</li>
+                    <li>Real-time notifications using WebSockets</li>
+                    <li>Payment gateway integration</li>
+                    <li>Mobile-first approach for optimal user experience</li>
+                </ul>
+                
+                <p>This project addresses a real need in the university community and demonstrates my ability to create practical, user-centered web applications.</p>
+            `,
+            technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'AJAX', 'WebSockets', 'Responsive Design']
+        },
+        'traffic-lights': {
+            title: 'Traffic Lights Simulator',
+            status: 'Public',
+            github: 'https://github.com/yourusername/TrafficLightsSimulator-RaspberryPi',
+            demo: null, // No demo available for hardware project
+            images: [
+                'images/projects/traffic-lights/screenshot1.jpg',
+                'images/projects/traffic-lights/screenshot2.jpg',
+                'images/projects/traffic-lights/screenshot3.jpg',
+                'images/projects/traffic-lights/screenshot4.jpg'
+            ],
+            description: `
+                <p>This project implements a practical traffic light control system using a Raspberry Pi, integrating networking concepts to simulate real-world traffic management scenarios.</p>
+                
+                <p><strong>Project Features:</strong></p>
+                <ul>
+                    <li>Physical traffic light model with LED indicators</li>
+                    <li>Programmable timing sequences for different traffic patterns</li>
+                    <li>Sensor integration for vehicle detection simulation</li>
+                    <li>Network communication between multiple traffic light nodes</li>
+                    <li>Web interface for monitoring and controlling the system</li>
+                    <li>Data logging and traffic pattern analysis</li>
+                    <li>Emergency vehicle priority simulation</li>
+                </ul>
+                
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>Python programming for Raspberry Pi GPIO control</li>
+                    <li>Socket programming for network communication</li>
+                    <li>Flask web server for the control interface</li>
+                    <li>SQLite database for logging and data analysis</li>
+                    <li>Hardware integration with LEDs, buttons, and sensors</li>
+                    <li>Multithreading for concurrent operations</li>
+                </ul>
+                
+                <p>This project demonstrates my skills in hardware-software integration, IoT concepts, and practical application of networking principles in a physical computing context.</p>
+            `,
+            technologies: ['Python', 'Raspberry Pi', 'GPIO', 'Flask', 'SQLite', 'Socket Programming', 'IoT', 'Hardware Integration']
+        },
+        'portfolio-website': {
+            title: 'Portfolio Website',
+            status: 'Public',
+            github: 'https://github.com/yourusername/portfolioWebsite',
+            demo: 'https://your-portfolio-url.com',
+            images: [
+                'images/projects/portfolio-website/screenshot1.jpg',
+                'images/projects/portfolio-website/screenshot2.jpg',
+                'images/projects/portfolio-website/screenshot3.jpg',
+                'images/projects/portfolio-website/screenshot4.jpg'
+            ],
+            description: `
+                <p>This portfolio website serves as a digital CV, showcasing my experience, education, skills, and projects in an interactive and visually appealing format.</p>
+                
+                <p><strong>Website Features:</strong></p>
+                <ul>
+                    <li>Responsive design that works on all device sizes</li>
+                    <li>Interactive sections for experience, education, and skills</li>
+                    <li>Project showcase with detailed information and images</li>
+                    <li>Animated elements and transitions for enhanced user experience</li>
+                    <li>Contact form for easy communication</li>
+                    <li>Dark theme with modern aesthetics</li>
+                    <li>Performance optimized for fast loading</li>
+                </ul>
+                
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>HTML5 for semantic structure</li>
+                    <li>CSS3 with custom animations and transitions</li>
+                    <li>Vanilla JavaScript for interactivity</li>
+                    <li>No frameworks or libraries for optimal performance</li>
+                    <li>Custom image carousel and modal implementations</li>
+                    <li>Form validation and submission handling</li>
+                </ul>
+                
+                <p>This website demonstrates my front-end development skills and attention to detail in creating engaging user interfaces.</p>
+            `,
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Web Animation', 'UI/UX Design']
+        }
+    };
+
+    // Get all project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    const modalContainer = document.querySelector('#project-modal');
+    const modal = modalContainer.querySelector('.modal');
+    const modalClose = modalContainer.querySelector('.modal-close');
+    const carouselContainer = modalContainer.querySelector('.carousel-container');
+    const carouselIndicators = modalContainer.querySelector('.carousel-indicators');
+    const modalTitle = modalContainer.querySelector('.modal-title');
+    const modalStatus = modalContainer.querySelector('.modal-status');
+    const githubLink = modalContainer.querySelector('.github-link');
+    const demoLink = modalContainer.querySelector('.demo-link');
+    const modalDescription = modalContainer.querySelector('.modal-description');
+    const modalTechTags = modalContainer.querySelector('.modal-tech-tags');
+
+    // Add click event to each project card
+    projectCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Get project ID from data attribute
+            const projectId = this.getAttribute('data-project');
+            const data = projectData[projectId];
+            
+            if (!data) return;
+
+            // Populate modal with data
+            modalTitle.textContent = data.title;
+            modalStatus.textContent = data.status;
+            modalDescription.innerHTML = data.description;
+            
+            // Set GitHub link
+            if (data.github) {
+                githubLink.href = data.github;
+                githubLink.style.display = 'inline-flex';
+            } else {
+                githubLink.style.display = 'none';
+            }
+            
+            // Set demo link
+            if (data.demo) {
+                demoLink.href = data.demo;
+                demoLink.style.display = 'inline-flex';
+            } else {
+                demoLink.style.display = 'none';
+            }
+
+            // Clear existing tech tags and add new ones
+            modalTechTags.innerHTML = '';
+            data.technologies.forEach(tech => {
+                const tag = document.createElement('span');
+                tag.className = 'modal-tech-tag';
+                tag.textContent = tech;
+                modalTechTags.appendChild(tag);
+            });
+
+            // Clear existing carousel slides and indicators
+            carouselContainer.innerHTML = '';
+            carouselIndicators.innerHTML = '';
+
+            // Create carousel slides and indicators
+            data.images.forEach((image, index) => {
+                // Create slide
+                const slide = document.createElement('div');
+                slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+                slide.innerHTML = `<img src="${image}" alt="${data.title} - Screenshot ${index + 1}">`;
+                carouselContainer.appendChild(slide);
+
+                // Create indicator
+                const indicator = document.createElement('div');
+                indicator.className = `carousel-indicator ${index === 0 ? 'active' : ''}`;
+                indicator.dataset.index = index;
+                carouselIndicators.appendChild(indicator);
+
+                // Add click event to indicator
+                indicator.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.dataset.index);
+                    activateSlide(slideIndex);
+                });
+            });
+
+            // Show the modal
+            modalContainer.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+            // Start the carousel
+            startCarousel();
+        });
+    });
+
+    // Close modal when clicking the close button
+    modalClose.addEventListener('click', function() {
+        closeModal();
+    });
+
+    // Close modal when clicking outside the modal content
+    modalContainer.addEventListener('click', function(e) {
+        if (e.target === modalContainer) {
+            closeModal();
+        }
+    });
+
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalContainer.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    function closeModal() {
+        modalContainer.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        stopCarousel();
+    }
+
+    // Carousel functionality
+    let carouselInterval;
+    let currentSlide = 0;
+
+    function startCarousel() {
+        // Reset current slide
+        currentSlide = 0;
+        
+        // Start automatic sliding
+        carouselInterval = setInterval(() => {
+            const slides = document.querySelectorAll('.carousel-slide');
+            currentSlide = (currentSlide + 1) % slides.length;
+            activateSlide(currentSlide);
+        }, 5000); // Change slide every 5 seconds
+    }
+
+    function stopCarousel() {
+        clearInterval(carouselInterval);
+    }
+
+    function activateSlide(index) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        
+        // Deactivate all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Activate the selected slide and indicator
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        
+        // Update current slide
+        currentSlide = index;
+    }
+});
