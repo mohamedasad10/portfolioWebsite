@@ -312,40 +312,218 @@
 
       <div class="additional-skills reveal-bottom">
           <div class="skill-tags">
-            
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">ARM Assembly</span>
-            <span class="skill-tag">PHP</span>
-            
-            <span class="skill-tag">Unity</span>
-            <span class="skill-tag">Augmented Reality (AR)</span>
-            <span class="skill-tag">Virtual Reality (VR)</span>
-            <span class="skill-tag">3D Modeling</span>
-            <span class="skill-tag">3ds Max</span>
-            <span class="skill-tag">Adobe Photoshop</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Workbench</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">MySQL Workbench</span>
-            <span class="skill-tag">PhpMyAdmin</span>
-            <span class="skill-tag">XAMPP</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub</span>
-            <span class="skill-tag">Jupyter</span>
-            <span class="skill-tag">Visual Studio</span>
-            <span class="skill-tag">WSL</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Ubuntu</span>
-            <span class="skill-tag">Chrome DevTools</span>
-            <span class="skill-tag">Secure Shell (SSH)</span>
 
+            <style>
+                /* Skills Icons Styles */
+                .skills-icons {
+                    margin-top: 40px;
+                }
+                
+                .icon-category {
+                    margin-bottom: 40px;
+                }
+                
+                .icon-category h4 {
+                    font-size: 1.3rem;
+                    color: var(--primary-color);
+                    margin-bottom: 20px;
+                    text-align: left;
+                }
+                
+                .icon-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 25px;
+                    justify-content: flex-start;
+                }
+                
+                .skill-icon {
+                    transition: var(--transition);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    width: 80px;
+                }
+                
+                .skill-icon img {
+                    height: 60px;
+                    width: 60px;
+                    margin-bottom: 8px;
+                    transition: transform 0.3s ease;
+                }
+                
+                .skill-icon span {
+                    font-size: 0.8rem;
+                    color: var(--text-color-light);
+                }
+                
+                .skill-icon:hover img {
+                    transform: translateY(-5px);
+                }
+                
+                .skill-icon:hover span {
+                    color: var(--primary-color);
+                }
+                
+                /* Responsive adjustments */
+                @media screen and (max-width: 768px) {
+                    .icon-container {
+                        justify-content: center;
+                    }
+                    
+                    .icon-category h4 {
+                        text-align: center;
+                    }
+                }
+                </style>
+                
+                <div class="skills-icons">
+                    <div class="icon-category">
+                        <h4>Programming Languages</h4>
+                        <div class="icon-container">
+                            <a href="https://www.java.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                                <span>Java</span>
+                            </a>
+                            <a href="https://www.python.org/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                                <span>Python</span>
+                            </a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                                <span>JavaScript</span>
+                            </a>
+                            <a href="https://www.php.net/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                                <span>PHP</span>
+                            </a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                                <span>HTML5</span>
+                            </a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                                <span>CSS3</span>
+                            </a>
+                            <a href="https://www.arm.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="ARM Assembly">
+                                <span>ARM Assembly</span>
+                            </a>
+                            <a href="https://www.mysql.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                                <span>SQL</span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="icon-category">
+                        <h4>Web Development</h4>
+                        <div class="icon-container">
+                            <a href="https://nodejs.org/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                                <span>Node.js</span>
+                            </a>
+                            <a href="https://developer.chrome.com/docs/devtools/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" alt="Chrome DevTools">
+                                <span>Chrome DevTools</span>
+                            </a>
+                            <a href="https://www.mongodb.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                                <span>MongoDB</span>
+                            </a>
+                            <a href="https://www.mysql.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                                <span>MySQL</span>
+                            </a>
+                            <a href="https://www.mysql.com/products/workbench/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL Workbench">
+                                <span>MySQL Workbench</span>
+                            </a>
+                            <a href="https://www.phpmyadmin.net/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="phpMyAdmin">
+                                <span>phpMyAdmin</span>
+                            </a>
+                            <a href="https://www.apachefriends.org/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="XAMPP">
+                                <span>XAMPP</span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="icon-category">
+                        <h4>Tools & Platforms</h4>
+                        <div class="icon-container">
+                            <a href="https://www.linux.org/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+                                <span>Linux</span>
+                            </a>
+                            <a href="https://ubuntu.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu">
+                                <span>Ubuntu</span>
+                            </a>
+                            <a href="https://git-scm.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                                <span>Git</span>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.ssh.com/academy/ssh" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ssh/ssh-original.svg" alt="SSH">
+                                <span>SSH</span>
+                            </a>
+                            <a href="https://learn.microsoft.com/en-us/windows/wsl/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="WSL">
+                                <span>WSL</span>
+                            </a>
+                            <a href="https://visualstudio.microsoft.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio">
+                                <span>Visual Studio</span>
+                            </a>
+                            <a href="https://jupyter.org/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" alt="Jupyter">
+                                <span>Jupyter</span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="icon-category">
+                        <h4>Creative & Design</h4>
+                        <div class="icon-container">
+                            <a href="https://unity.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity">
+                                <span>Unity</span>
+                            </a>
+                            <a href="https://www.autodesk.com/products/3ds-max/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/autodesk/autodesk-original.svg" alt="Autodesk" style="height: 60px;">
+                                <span>3ds Max</span>
+                            </a>
+                            <a href="https://www.blender.org/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="3D Modeling">
+                                <span>3D Modeling</span>
+                            </a>
+                            <a href="https://www.adobe.com/products/photoshop.html" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
+                                <span>Photoshop</span>
+                            </a>
+                            <a href="https://www.photopea.com/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg" alt="Photopea">
+                                <span>Photopea</span>
+                            </a>
+
+                            <a href="https://developers.google.com/ar" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="AR">
+                                <span>AR</span>
+                            </a>
+                            <a href="https://www.oculus.com/developers/" target="_blank" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="VR">
+                                <span>VR</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>  
           </div>
       </div>
   </div>
