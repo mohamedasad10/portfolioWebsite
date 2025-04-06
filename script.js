@@ -255,9 +255,10 @@ document.addEventListener('DOMContentLoaded', function() {
             organization: 'Standard Bank',
             date: '2025',
             images: [
-                'images/standard-bank-event.jpg',
-                'images/standard-bank-event-2.jpg',
-                'images/standard-bank-event-3.jpg'
+                'Images/UniHack.jpg',
+                'Images/UniHackTEAM.jpg',
+                'Images/UniHack1.jpg',
+                'Images/CareerCompassLogo.jpg'
             ],
             description: `
                 <p>The Standard Bank UniHack 2025 was an intensive 48-hour hackathon that brought together talented students from universities across South Africa to develop innovative solutions addressing youth unemployment.</p>
@@ -281,9 +282,8 @@ document.addEventListener('DOMContentLoaded', function() {
             organization: 'SANReN',
             date: '2024',
             images: [
-                'images/sanren-event.jpg',
-                'images/sanren-event-2.jpg',
-                'images/sanren-event-3.jpg'
+                
+                'Images/Sanren.jpg'
             ],
             description: `
                 <p>The SANReN Cyber Security Challenge is South Africa's premier cybersecurity competition for university students, designed to test and enhance skills in various security domains.</p>
