@@ -563,7 +563,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'immersive-tech': {
             title: 'Immersive Technologies',
             status: 'Public',
-            github: 'https://github.com/yourusername/Immersive-Technologies',
+            github: 'https://github.com/mohamedasad10/Immersive-Technologies',
             demo: 'https://immersive-tech-demo.example.com',
             images: [
                 'images/projects/immersive-tech/screenshot1.jpg',
@@ -715,6 +715,9 @@ document.addEventListener('DOMContentLoaded', function() {
             technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Web Animation', 'UI/UX Design']
         }
     };
+
+    
+    
 
     // Get all project cards
     const projectCards = document.querySelectorAll('.project-card');
