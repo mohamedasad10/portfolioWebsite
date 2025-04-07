@@ -424,7 +424,7 @@
     }
     
     /* Project Modal Styles */
-    .modal-container {
+    .project-modal-container {
         position: fixed;
         top: 0;
         left: 0;
@@ -440,12 +440,12 @@
         transition: opacity 0.3s ease, visibility 0.3s ease;
     }
     
-    .modal-container.active {
+    .project-modal-container.active {
         opacity: 1;
         visibility: visible;
     }
     
-    .modal {
+    .project-modal {
         background-color: var(--bg-color-lighter);
         width: 90%;
         max-width: 1000px;
@@ -458,11 +458,11 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
     
-    .modal-container.active .modal {
+    .project-modal-container.active .project-modal {
         transform: scale(1);
     }
     
-    .modal-close {
+    .project-modal-close {
         position: absolute;
         top: 15px;
         right: 20px;
@@ -473,33 +473,33 @@
         transition: var(--transition);
     }
     
-    .modal-close:hover {
+    .project-modal-close:hover {
         color: var(--primary-color);
         transform: rotate(90deg);
     }
     
-    .modal-content {
+    .project-modal-content {
         display: flex;
         flex-direction: column;
         max-height: 90vh;
         overflow-y: auto;
     }
     
-    /* Carousel Styles */
-    .modal-carousel {
+    /* Project Carousel Styles */
+    .project-modal-carousel {
         width: 100%;
         position: relative;
         background-color: var(--bg-color);
     }
     
-    .carousel-container {
+    .project-carousel-container {
         width: 100%;
         height: 40vh;
         position: relative;
         overflow: hidden;
     }
     
-    .carousel-slide {
+    .project-carousel-slide {
         position: absolute;
         top: 0;
         left: 0;
@@ -509,18 +509,18 @@
         transition: opacity 1s ease;
     }
     
-    .carousel-slide.active {
+    .project-carousel-slide.active {
         opacity: 1;
     }
     
-    .carousel-slide img {
+    .project-carousel-slide img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         background-color: var(--bg-color);
     }
     
-    .carousel-indicators {
+    .project-carousel-indicators {
         position: absolute;
         bottom: 20px;
         left: 50%;
@@ -529,7 +529,7 @@
         gap: 10px;
     }
     
-    .carousel-indicator {
+    .project-carousel-indicator {
         width: 12px;
         height: 12px;
         border-radius: 50%;
@@ -538,27 +538,27 @@
         transition: var(--transition);
     }
     
-    .carousel-indicator.active {
+    .project-carousel-indicator.active {
         background-color: var(--primary-color);
     }
     
-    /* Modal Info Styles */
-    .modal-info {
+    /* Project Modal Info Styles */
+    .project-modal-info {
         padding: 30px;
     }
     
-    .modal-title {
+    .project-modal-title {
         font-size: 1.8rem;
         color: var(--primary-color);
         margin-bottom: 5px;
     }
     
-    .modal-subtitle {
+    .project-modal-subtitle {
         font-size: 1.3rem;
         margin-bottom: 10px;
     }
     
-    .modal-status {
+    .project-modal-status {
         display: inline-block;
         padding: 3px 10px;
         background-color: rgba(0, 230, 118, 0.1);
@@ -568,32 +568,32 @@
         margin-bottom: 20px;
     }
     
-    .modal-description {
+    .project-modal-description {
         color: var(--text-color-light);
         line-height: 1.6;
         margin-bottom: 20px;
     }
     
-    .modal-description p {
+    .project-modal-description p {
         margin-bottom: 15px;
     }
     
-    .modal-description ul {
+    .project-modal-description ul {
         margin-bottom: 15px;
         padding-left: 20px;
     }
     
-    .modal-description ul li {
+    .project-modal-description ul li {
         margin-bottom: 8px;
     }
     
-    .modal-links {
+    .project-modal-links {
         display: flex;
         gap: 15px;
         margin-bottom: 20px;
     }
     
-    .modal-link {
+    .project-modal-link {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -605,32 +605,32 @@
         text-decoration: none;
     }
     
-    .modal-link:hover {
+    .project-modal-link:hover {
         background-color: var(--primary-color);
         color: var(--bg-color);
     }
     
-    .modal-link i {
+    .project-modal-link i {
         font-size: 1.2rem;
     }
     
-    .modal-technologies {
+    .project-modal-technologies {
         margin-top: 20px;
     }
     
-    .modal-technologies h4 {
+    .project-modal-technologies h4 {
         font-size: 1.1rem;
         margin-bottom: 10px;
         color: var(--primary-color);
     }
     
-    .modal-tech-tags {
+    .project-modal-tech-tags {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
     
-    .modal-tech-tag {
+    .project-modal-tech-tag {
         background-color: var(--bg-color);
         color: var(--text-color);
         padding: 5px 12px;
@@ -640,22 +640,22 @@
     
     /* Make modal responsive */
     @media screen and (min-width: 768px) {
-        .modal-content {
+        .project-modal-content {
             flex-direction: row;
         }
         
-        .modal-carousel, .modal-info {
+        .project-modal-carousel, .project-modal-info {
             width: 50%;
         }
         
-        .carousel-container {
+        .project-carousel-container {
             height: 100%;
             min-height: 400px;
         }
     }
     
     @media screen and (max-width: 767px) {
-        .carousel-container {
+        .project-carousel-container {
             height: 40vh;
         }
         
@@ -676,7 +676,7 @@
                 <!-- Fintion Banking -->
                 <div class="project-card reveal-bottom" data-project="fintion-banking">
                     <div class="project-image">
-                        <img src="Images/FintionLogo.png" alt="Fintion Banking App" style="width: 100%; height: 100%;">
+                        <img src="Images/FintionLogo.png" alt="Fintion Banking App">
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -707,7 +707,7 @@
                     <div class="project-content">
                         <div class="project-header">
                             <div class="project-logo">
-                                <img src="images/projects/immersive-logo.png" alt="Immersive Tech Logo">
+                                <img src="Images/UnityRendering.png" alt="Immersive Tech Logo">
                             </div>
                             <div class="project-title">
                                 <h3>Immersive Technologies</h3>
@@ -754,7 +754,7 @@
                 <!-- Traffic Lights Simulator -->
                 <div class="project-card reveal-bottom" data-project="traffic-lights">
                     <div class="project-image">
-                        <img src="images/projects/traffic-lights.jpg" alt="Traffic Lights Simulator">
+                        <img src="Images/" alt="Traffic Lights Simulator">
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -776,42 +776,40 @@
                         </div>
                     </div>
                 </div>
-    
-                
             </div>
         </div>
     </section>
     
-    <!-- Modal Container -->
-    <div class="modal-container" id="project-modal">
-        <div class="modal">
-            <div class="modal-close">&times;</div>
-            <div class="modal-content">
-                <div class="modal-carousel">
-                    <div class="carousel-container">
+    <!-- Project Modal Container (add this at the end of your body tag, before scripts) -->
+    <div class="project-modal-container" id="project-modal">
+        <div class="project-modal">
+            <div class="project-modal-close">&times;</div>
+            <div class="project-modal-content">
+                <div class="project-modal-carousel">
+                    <div class="project-carousel-container">
                         <!-- Images will be dynamically inserted here -->
                     </div>
-                    <div class="carousel-indicators">
+                    <div class="project-carousel-indicators">
                         <!-- Indicators will be dynamically inserted here -->
                     </div>
                 </div>
-                <div class="modal-info">
-                    <h2 class="modal-title">Project Title</h2>
-                    <div class="modal-status">Public</div>
-                    <div class="modal-links">
-                        <a href="#" class="modal-link github-link" target="_blank">
+                <div class="project-modal-info">
+                    <h2 class="project-modal-title">Project Title</h2>
+                    <div class="project-modal-status">Public</div>
+                    <div class="project-modal-links">
+                        <a href="#" class="project-modal-link github-link" target="_blank">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="#" class="modal-link demo-link" target="_blank">
+                        <a href="#" class="project-modal-link demo-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
                     </div>
-                    <div class="modal-description">
+                    <div class="project-modal-description">
                         <!-- Description will be dynamically inserted here -->
                     </div>
-                    <div class="modal-technologies">
+                    <div class="project-modal-technologies">
                         <h4>Technologies Used</h4>
-                        <div class="modal-tech-tags">
+                        <div class="project-modal-tech-tags">
                             <!-- Tech tags will be dynamically inserted here -->
                         </div>
                     </div>
@@ -819,8 +817,8 @@
             </div>
         </div>
     </div>
-
-
+    
+    
 
 
 

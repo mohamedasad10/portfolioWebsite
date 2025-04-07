@@ -517,8 +517,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //
 // PROJECT SECTION
-// Project Modal and Carousel Functionality
-//
+// Project Modal and Carousel Functionality - Separate from Extracurricular Activities
 document.addEventListener('DOMContentLoaded', function() {
     // Project data with images and descriptions
     const projectData = {
@@ -719,17 +718,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Get all project cards
     const projectCards = document.querySelectorAll('.project-card');
-    const modalContainer = document.querySelector('#project-modal');
-    const modal = modalContainer.querySelector('.modal');
-    const modalClose = modalContainer.querySelector('.modal-close');
-    const carouselContainer = modalContainer.querySelector('.carousel-container');
-    const carouselIndicators = modalContainer.querySelector('.carousel-indicators');
-    const modalTitle = modalContainer.querySelector('.modal-title');
-    const modalStatus = modalContainer.querySelector('.modal-status');
-    const githubLink = modalContainer.querySelector('.github-link');
-    const demoLink = modalContainer.querySelector('.demo-link');
-    const modalDescription = modalContainer.querySelector('.modal-description');
-    const modalTechTags = modalContainer.querySelector('.modal-tech-tags');
+    const projectModalContainer = document.querySelector('#project-modal');
+    const projectModal = projectModalContainer.querySelector('.project-modal');
+    const projectModalClose = projectModalContainer.querySelector('.project-modal-close');
+    const projectCarouselContainer = projectModalContainer.querySelector('.project-carousel-container');
+    const projectCarouselIndicators = projectModalContainer.querySelector('.project-carousel-indicators');
+    const projectModalTitle = projectModalContainer.querySelector('.project-modal-title');
+    const projectModalStatus = projectModalContainer.querySelector('.project-modal-status');
+    const projectGithubLink = projectModalContainer.querySelector('.github-link');
+    const projectDemoLink = projectModalContainer.querySelector('.demo-link');
+    const projectModalDescription = projectModalContainer.querySelector('.project-modal-description');
+    const projectModalTechTags = projectModalContainer.querySelector('.project-modal-tech-tags');
 
     // Add click event to each project card
     projectCards.forEach(card => {
@@ -741,117 +740,117 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!data) return;
 
             // Populate modal with data
-            modalTitle.textContent = data.title;
-            modalStatus.textContent = data.status;
-            modalDescription.innerHTML = data.description;
+            projectModalTitle.textContent = data.title;
+            projectModalStatus.textContent = data.status;
+            projectModalDescription.innerHTML = data.description;
             
             // Set GitHub link
             if (data.github) {
-                githubLink.href = data.github;
-                githubLink.style.display = 'inline-flex';
+                projectGithubLink.href = data.github;
+                projectGithubLink.style.display = 'inline-flex';
             } else {
-                githubLink.style.display = 'none';
+                projectGithubLink.style.display = 'none';
             }
             
             // Set demo link
             if (data.demo) {
-                demoLink.href = data.demo;
-                demoLink.style.display = 'inline-flex';
+                projectDemoLink.href = data.demo;
+                projectDemoLink.style.display = 'inline-flex';
             } else {
-                demoLink.style.display = 'none';
+                projectDemoLink.style.display = 'none';
             }
 
             // Clear existing tech tags and add new ones
-            modalTechTags.innerHTML = '';
+            projectModalTechTags.innerHTML = '';
             data.technologies.forEach(tech => {
                 const tag = document.createElement('span');
-                tag.className = 'modal-tech-tag';
+                tag.className = 'project-modal-tech-tag';
                 tag.textContent = tech;
-                modalTechTags.appendChild(tag);
+                projectModalTechTags.appendChild(tag);
             });
 
             // Clear existing carousel slides and indicators
-            carouselContainer.innerHTML = '';
-            carouselIndicators.innerHTML = '';
+            projectCarouselContainer.innerHTML = '';
+            projectCarouselIndicators.innerHTML = '';
 
             // Create carousel slides and indicators
             data.images.forEach((image, index) => {
                 // Create slide
                 const slide = document.createElement('div');
-                slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+                slide.className = `project-carousel-slide ${index === 0 ? 'active' : ''}`;
                 slide.innerHTML = `<img src="${image}" alt="${data.title} - Screenshot ${index + 1}">`;
-                carouselContainer.appendChild(slide);
+                projectCarouselContainer.appendChild(slide);
 
                 // Create indicator
                 const indicator = document.createElement('div');
-                indicator.className = `carousel-indicator ${index === 0 ? 'active' : ''}`;
+                indicator.className = `project-carousel-indicator ${index === 0 ? 'active' : ''}`;
                 indicator.dataset.index = index;
-                carouselIndicators.appendChild(indicator);
+                projectCarouselIndicators.appendChild(indicator);
 
                 // Add click event to indicator
                 indicator.addEventListener('click', function() {
                     const slideIndex = parseInt(this.dataset.index);
-                    activateSlide(slideIndex);
+                    activateProjectSlide(slideIndex);
                 });
             });
 
             // Show the modal
-            modalContainer.classList.add('active');
+            projectModalContainer.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent scrolling
 
             // Start the carousel
-            startCarousel();
+            startProjectCarousel();
         });
     });
 
     // Close modal when clicking the close button
-    modalClose.addEventListener('click', function() {
-        closeModal();
+    projectModalClose.addEventListener('click', function() {
+        closeProjectModal();
     });
 
     // Close modal when clicking outside the modal content
-    modalContainer.addEventListener('click', function(e) {
-        if (e.target === modalContainer) {
-            closeModal();
+    projectModalContainer.addEventListener('click', function(e) {
+        if (e.target === projectModalContainer) {
+            closeProjectModal();
         }
     });
 
     // Close modal with ESC key
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modalContainer.classList.contains('active')) {
-            closeModal();
+        if (e.key === 'Escape' && projectModalContainer.classList.contains('active')) {
+            closeProjectModal();
         }
     });
 
-    function closeModal() {
-        modalContainer.classList.remove('active');
+    function closeProjectModal() {
+        projectModalContainer.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
-        stopCarousel();
+        stopProjectCarousel();
     }
 
     // Carousel functionality
-    let carouselInterval;
-    let currentSlide = 0;
+    let projectCarouselInterval;
+    let currentProjectSlide = 0;
 
-    function startCarousel() {
+    function startProjectCarousel() {
         // Reset current slide
-        currentSlide = 0;
+        currentProjectSlide = 0;
         
         // Start automatic sliding
-        carouselInterval = setInterval(() => {
-            const slides = document.querySelectorAll('.carousel-slide');
-            currentSlide = (currentSlide + 1) % slides.length;
-            activateSlide(currentSlide);
+        projectCarouselInterval = setInterval(() => {
+            const slides = document.querySelectorAll('.project-carousel-slide');
+            currentProjectSlide = (currentProjectSlide + 1) % slides.length;
+            activateProjectSlide(currentProjectSlide);
         }, 5000); // Change slide every 5 seconds
     }
 
-    function stopCarousel() {
-        clearInterval(carouselInterval);
+    function stopProjectCarousel() {
+        clearInterval(projectCarouselInterval);
     }
 
-    function activateSlide(index) {
-        const slides = document.querySelectorAll('.carousel-slide');
-        const indicators = document.querySelectorAll('.carousel-indicator');
+    function activateProjectSlide(index) {
+        const slides = document.querySelectorAll('.project-carousel-slide');
+        const indicators = document.querySelectorAll('.project-carousel-indicator');
         
         // Deactivate all slides and indicators
         slides.forEach(slide => slide.classList.remove('active'));
@@ -862,6 +861,6 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators[index].classList.add('active');
         
         // Update current slide
-        currentSlide = index;
+        currentProjectSlide = index;
     }
 });
