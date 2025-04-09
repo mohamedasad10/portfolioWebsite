@@ -668,43 +668,38 @@ document.addEventListener('DOMContentLoaded', function() {
             technologies: ['Python', 'Raspberry Pi', 'GPIO', 'Flask', 'SQLite', 'Socket Programming', 'IoT', 'Hardware Integration']
         },
         
-        'portfolio-website': {
-            title: 'Portfolio Website',
+        'SmartCityAR': {
+            title: 'SmartCityAR',
             status: 'Public',
             
             images: [
-                'images/projects/portfolio-website/screenshot1.jpg',
-                'images/projects/portfolio-website/screenshot2.jpg',
-                'images/projects/portfolio-website/screenshot3.jpg',
-                'images/projects/portfolio-website/screenshot4.jpg'
+                'Images/InfoSmartCityAR.png',
+                
             ],
             description: `
-                <p>This portfolio website serves as a digital CV, showcasing my experience, education, skills, and projects in an interactive and visually appealing format.</p>
-                
-                <p><strong>Website Features:</strong></p>
-                <ul>
-                    <li>Responsive design that works on all device sizes</li>
-                    <li>Interactive sections for experience, education, and skills</li>
-                    <li>Project showcase with detailed information and images</li>
-                    <li>Animated elements and transitions for enhanced user experience</li>
-                    <li>Contact form for easy communication</li>
-                    <li>Dark theme with modern aesthetics</li>
-                    <li>Performance optimized for fast loading</li>
-                </ul>
-                
-                <p><strong>Technical Implementation:</strong></p>
-                <ul>
-                    <li>HTML5 for semantic structure</li>
-                    <li>CSS3 with custom animations and transitions</li>
-                    <li>Vanilla JavaScript for interactivity</li>
-                    <li>No frameworks or libraries for optimal performance</li>
-                    <li>Custom image carousel and modal implementations</li>
-                    <li>Form validation and submission handling</li>
-                </ul>
+        <p>SmartCity AR is an interactive Augmented Reality application designed to visualize sustainable urban planning concepts for city infrastructure and public transport improvements.</p>
+
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>AR visualization of proposed city upgrades using 3D models</li>
+            <li>Toggle between sustainable and unsustainable urban layouts</li>
+            <li>Interactive layers to explore traffic, public transport, and pedestrian zones</li>
+            <li>Touch-based object interaction and educational tooltips</li>
+            <li>Designed for urban planners, students, and educators</li>
+        </ul>
+
+        <p><strong>Technical Implementation:</strong></p>
+        <ul>
+            <li>Unity engine with AR Foundation</li>
+            <li>3D modeling with optimized low-poly assets</li>
+            <li>UI system for scene interaction and toggling</li>
+            <li>Surface detection and plane tracking for accurate placement</li>
+            <li>Performance optimized for mobile devices</li>
+        </ul>
                 
                 <p>This website demonstrates my front-end development skills and attention to detail in creating engaging user interfaces.</p>
             `,
-            technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Web Animation', 'UI/UX Design']
+            technologies: ['Unity', 'AR Foundation', 'C#', '3D Modelling', 'Mobile AR', 'UI/UX Design']
         }
     };
 
