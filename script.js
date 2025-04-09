@@ -307,9 +307,9 @@ document.addEventListener('DOMContentLoaded', function() {
             organization: 'WebMax x Enactus',
             date: 'Sept 2024 - Present',
             images: [
-                'images/webmax-event.jpg',
-                'images/webmax-event-2.jpg',
-                'images/webmax-event-3.jpg'
+                'Images/OutreachGardeniaPrim.jpg',
+                'Images/OutreachTeam.jpg'
+                
             ],
             description: `
                 <p>The School Outreach Program is a collaborative initiative between WebMax and Enactus aimed at introducing technology concepts to high school students in underserved communities around Cape Town.</p>
