@@ -331,9 +331,10 @@ document.addEventListener('DOMContentLoaded', function() {
             organization: 'South African Innovation Summit',
             date: 'Aug 2024 - Sept 2024',
             images: [
-                'images/sais-event.jpg',
-                'images/sais-event-2.jpg',
-                'images/sais-event-3.jpg'
+                'Images/Sais2024.jpg',
+                'Images/SaisBuilding.jpg',
+                'Images/SaisVR.jpg',
+                
             ],
             description: `
                 <p>The South African Innovation Summit (SAIS) is Africa's largest startup event, bringing together entrepreneurs, investors, and innovation enablers from across the continent and beyond.</p>
