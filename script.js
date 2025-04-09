@@ -191,60 +191,62 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveLink);
     
     // Form validation
-    const contactForm = document.querySelector('.contact-form form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const subjectInput = document.getElementById('subject');
-            const messageInput = document.getElementById('message');
-            
-            let isValid = true;
-            
-            if (nameInput.value.trim() === '') {
-                isValid = false;
-                nameInput.style.borderColor = 'red';
-            } else {
-                nameInput.style.borderColor = '';
-            }
-            
-            if (emailInput.value.trim() === '' || !isValidEmail(emailInput.value)) {
-                isValid = false;
-                emailInput.style.borderColor = 'red';
-            } else {
-                emailInput.style.borderColor = '';
-            }
-            
-            if (subjectInput.value.trim() === '') {
-                isValid = false;
-                subjectInput.style.borderColor = 'red';
-            } else {
-                subjectInput.style.borderColor = '';
-            }
-            
-            if (messageInput.value.trim() === '') {
-                isValid = false;
-                messageInput.style.borderColor = 'red';
-            } else {
-                messageInput.style.borderColor = '';
-            }
-            
-            if (isValid) {
-                // Here you would typically send the form data to a server
-                alert('Message sent successfully!');
-                contactForm.reset();
-            }
-        });
-    }
-    
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Prevent default form submission initially
+        e.preventDefault();
+        
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+        
+        let isValid = true;
+        
+        if (nameInput.value.trim() === '') {
+            isValid = false;
+            nameInput.style.borderColor = 'red';
+        } else {
+            nameInput.style.borderColor = '';
+        }
+        
+        if (emailInput.value.trim() === '' || !isValidEmail(emailInput.value)) {
+            isValid = false;
+            emailInput.style.borderColor = 'red';
+        } else {
+            emailInput.style.borderColor = '';
+        }
+        
+        if (subjectInput.value.trim() === '') {
+            isValid = false;
+            subjectInput.style.borderColor = 'red';
+        } else {
+            subjectInput.style.borderColor = '';
+        }
+        
+        if (messageInput.value.trim() === '') {
+            isValid = false;
+            messageInput.style.borderColor = 'red';
+        } else {
+            messageInput.style.borderColor = '';
+        }
+        
+        if (isValid) {
+            // If form is valid, submit it
+            this.submit();
+        }
+    });
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
 });
+
+
 
 // Modal and Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {

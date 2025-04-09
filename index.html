@@ -1607,26 +1607,31 @@
               
           </div>
           <div class="contact-form reveal-right">
-              <form id="contactForm">
-                  <div class="form-group">
-                      <input type="text" id="name" placeholder="Name" required>
-                      <label for="name">Name</label>
-                  </div>
-                  <div class="form-group">
-                      <input type="email" id="email" placeholder="Email" required>
-                      <label for="email">Email</label>
-                  </div>
-                  <div class="form-group">
-                      <input type="text" id="subject" placeholder="Subject" required>
-                      <label for="subject">Subject</label>
-                  </div>
-                  <div class="form-group">
-                      <textarea id="message" placeholder="Message" required></textarea>
-                      <label for="message">Message</label>
-                  </div>
-                  <button type="submit" class="btn primary-btn">Send Message</button>
-              </form>
-          </div>
+            <form id="contactForm" action="https://formsubmit.co/mohamedasad11914@gmail.com" method="POST">
+                <!-- FormSubmit configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://mohamedasad10.github.io/thanks.html">
+                <input type="text" name="_honey" style="display:none">
+                
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+        </div>
       </div>
   </div>
   <div class="contact-shapes">
