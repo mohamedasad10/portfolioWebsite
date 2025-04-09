@@ -528,10 +528,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             images: [
-                'images/projects/fintion-banking/screenshot1.jpg',
-                'images/projects/fintion-banking/screenshot2.jpg',
-                'images/projects/fintion-banking/screenshot3.jpg',
-                'images/projects/fintion-banking/screenshot4.jpg'
+                'Images/FintionLogo.png',
+                
             ],
             description: `
                 <p>Fintion Banking is a full-stack banking application that provides secure transactions and comprehensive account management features.</p>
@@ -567,10 +565,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             images: [
-                'images/projects/immersive-tech/screenshot1.jpg',
-                'images/projects/immersive-tech/screenshot2.jpg',
-                'images/projects/immersive-tech/screenshot3.jpg',
-                'images/projects/immersive-tech/screenshot4.jpg'
+                'Images/ArcadeScene.png',
+                
             ],
             description: `
                 <p>This portfolio showcases my work in Virtual Reality (VR) and Augmented Reality (AR) technologies, demonstrating immersive experiences and interactive applications.</p>
@@ -603,10 +599,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             images: [
-                'images/projects/feedem-now/screenshot1.jpg',
-                'images/projects/feedem-now/screenshot2.jpg',
-                'images/projects/feedem-now/screenshot3.jpg',
-                'images/projects/feedem-now/screenshot4.jpg'
+                'Images/feedemnow-logo-2.png',
+                
             ],
             description: `
                 <p>Feedem Now is a web-based food ordering platform designed specifically for university students, helping them save time by pre-ordering meals and avoiding long cafeteria lines.</p>
@@ -642,10 +636,8 @@ document.addEventListener('DOMContentLoaded', function() {
             status: 'Public',
             
             images: [
-                'images/projects/traffic-lights/screenshot1.jpg',
-                'images/projects/traffic-lights/screenshot2.jpg',
-                'images/projects/traffic-lights/screenshot3.jpg',
-                'images/projects/traffic-lights/screenshot4.jpg'
+                'Images/RasPi.jpg',
+                
             ],
             description: `
                 <p>This project implements a practical traffic light control system using a Raspberry Pi, integrating networking concepts to simulate real-world traffic management scenarios.</p>
@@ -675,6 +667,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `,
             technologies: ['Python', 'Raspberry Pi', 'GPIO', 'Flask', 'SQLite', 'Socket Programming', 'IoT', 'Hardware Integration']
         },
+        
         'portfolio-website': {
             title: 'Portfolio Website',
             status: 'Public',
