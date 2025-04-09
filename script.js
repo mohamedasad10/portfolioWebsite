@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Images/Sais2024.jpg',
                 'Images/SaisBuilding.jpg',
                 'Images/SaisVR.jpg',
-                
+                'Images/SaisBuilding.jpg',
             ],
             description: `
                 <p>The South African Innovation Summit (SAIS) is Africa's largest startup event, bringing together entrepreneurs, investors, and innovation enablers from across the continent and beyond.</p>
@@ -525,8 +525,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'fintion-banking': {
             title: 'Fintion Banking',
             status: 'Public',
-            github: 'https://github.com/yourusername/FintionBanking',
-            demo: 'https://fintion-banking-demo.example.com',
+            
+            
             images: [
                 'images/projects/fintion-banking/screenshot1.jpg',
                 'images/projects/fintion-banking/screenshot2.jpg',
@@ -564,8 +564,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'immersive-tech': {
             title: 'Immersive Technologies',
             status: 'Public',
-            github: 'https://github.com/mohamedasad10/Immersive-Technologies',
-            demo: 'https://immersive-tech-demo.example.com',
+            
+            
             images: [
                 'images/projects/immersive-tech/screenshot1.jpg',
                 'images/projects/immersive-tech/screenshot2.jpg',
@@ -600,8 +600,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'feedem-now': {
             title: 'Feedem Now',
             status: 'Public',
-            github: 'https://github.com/yourusername/FeedemNow',
-            demo: 'https://feedem-now-demo.example.com',
+            
+            
             images: [
                 'images/projects/feedem-now/screenshot1.jpg',
                 'images/projects/feedem-now/screenshot2.jpg',
@@ -640,8 +640,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'traffic-lights': {
             title: 'Traffic Lights Simulator',
             status: 'Public',
-            github: 'https://github.com/yourusername/TrafficLightsSimulator-RaspberryPi',
-            demo: null, // No demo available for hardware project
+            
             images: [
                 'images/projects/traffic-lights/screenshot1.jpg',
                 'images/projects/traffic-lights/screenshot2.jpg',
@@ -679,8 +678,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'portfolio-website': {
             title: 'Portfolio Website',
             status: 'Public',
-            github: 'https://github.com/yourusername/portfolioWebsite',
-            demo: 'https://your-portfolio-url.com',
+            
             images: [
                 'images/projects/portfolio-website/screenshot1.jpg',
                 'images/projects/portfolio-website/screenshot2.jpg',
