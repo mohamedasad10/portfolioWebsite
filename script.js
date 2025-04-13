@@ -636,7 +636,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <p>This project addresses a real need in the university community and demonstrates my ability to create practical, user-centered web applications.</p>
             `,
-            technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'AJAX', 'WebSockets', 'Responsive Design']
+            technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'WebSockets', 'Responsive Design']
         },
         'traffic-lights': {
             title: 'Traffic Lights Simulator',
@@ -672,7 +672,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <p>This project demonstrates my skills in hardware-software integration, IoT concepts, and practical application of networking principles in a physical computing context.</p>
             `,
-            technologies: ['Python', 'Raspberry Pi', 'GPIO', 'Flask', 'SQLite', 'Socket Programming', 'IoT', 'Hardware Integration']
+            technologies: ['Python', 'Raspberry Pi', 'GPIO', 'Socket Programming', 'IoT', 'Hardware Integration']
         },
         
         'SmartCityAR': {
