@@ -601,7 +601,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             images: [
-                'Images/feedemnow-logo-2.png',
+                'Images/FeedeemNowHomePage.png',
+                'Images/FeedeemNowLogin.png',
+                'Images/FeedeemNowCheckOut.png',
+                'Images/FeedeemNowDB.png',
                 
             ],
             description: `
