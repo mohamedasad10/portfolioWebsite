@@ -530,7 +530,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             images: [
-                'Images/FintionLogo.png',
+                'Images/FintionHomePage.png',
+                'Images/FintionDB.png'
+                
                 
             ],
             description: `
@@ -601,10 +603,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             images: [
-                'Images/FeedeemNowHomePage.png',
-                'Images/FeedeemNowLogin.png',
-                'Images/FeedeemNowCheckOut.png',
-                'Images/FeedeemNowDB.png',
+                'Images/FeedemNowHomePage.png',
+                'Images/FeedemNowLogin.png',
+                'Images/FeedemNowCheckOut.png',
+                'Images/FeedemNowDB.png'
                 
             ],
             description: `
