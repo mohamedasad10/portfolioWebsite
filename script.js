@@ -551,17 +551,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <p><strong>Technical Implementation:</strong></p>
                 <ul>
-                    <li>PHP backend with MVC architecture</li>
+                    <li>PHP backend </li>
                     <li>MySQL database for secure data storage</li>
                     <li>JavaScript for dynamic frontend interactions</li>
-                    <li>AJAX for asynchronous data loading</li>
                     <li>Responsive design for all device sizes</li>
-                    <li>Security features including prepared statements, input validation, and CSRF protection</li>
                 </ul>
                 
                 <p>This project demonstrates my ability to create secure, full-stack applications with complex business logic and database interactions.</p>
             `,
-            technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'AJAX', 'jQuery', 'Bootstrap']
+            technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS']
         },
         'immersive-tech': {
             title: 'Immersive Technologies',
@@ -578,9 +576,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p><strong>Project Highlights:</strong></p>
                 <ul>
                     <li>AR educational application that brings textbook content to life</li>
-                    <li>VR campus tour for prospective university students</li>
-                    <li>Interactive AR product visualization for e-commerce</li>
-                    <li>VR training simulation for industrial safety procedures</li>
+                    <li>Interactive AR product visualization</li>
                     <li>AR navigation system for indoor spaces</li>
                 </ul>
                 
@@ -595,7 +591,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <p>This collection demonstrates my skills in creating engaging and interactive immersive experiences across multiple platforms and use cases.</p>
             `,
-            technologies: ['Unity', 'C#', 'AR', 'VR', 'ARCore', 'ARKit', 'Blender', '3ds Max', 'Oculus SDK']
+            technologies: ['Unity', 'C#', 'AR', 'VR', 'ARCore', 'ARKit', 'Blender', '3ds Max']
         },
         'feedem-now': {
             title: 'Feedem Now',
@@ -629,7 +625,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li>PHP backend with RESTful API architecture</li>
                     <li>MySQL database for data storage</li>
                     <li>JavaScript frontend with responsive design</li>
-                    <li>Real-time notifications using WebSockets</li>
                     <li>Payment gateway integration</li>
                     <li>Mobile-first approach for optimal user experience</li>
                 </ul>
@@ -653,11 +648,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul>
                     <li>Physical traffic light model with LED indicators</li>
                     <li>Programmable timing sequences for different traffic patterns</li>
-                    <li>Sensor integration for vehicle detection simulation</li>
                     <li>Network communication between multiple traffic light nodes</li>
                     <li>Web interface for monitoring and controlling the system</li>
-                    <li>Data logging and traffic pattern analysis</li>
-                    <li>Emergency vehicle priority simulation</li>
                 </ul>
                 
                 <p><strong>Technical Implementation:</strong></p>
@@ -665,9 +657,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li>Python programming for Raspberry Pi GPIO control</li>
                     <li>Socket programming for network communication</li>
                     <li>Flask web server for the control interface</li>
-                    <li>SQLite database for logging and data analysis</li>
                     <li>Hardware integration with LEDs, buttons, and sensors</li>
-                    <li>Multithreading for concurrent operations</li>
                 </ul>
                 
                 <p>This project demonstrates my skills in hardware-software integration, IoT concepts, and practical application of networking principles in a physical computing context.</p>
