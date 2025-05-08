@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Preloader
     window.addEventListener('load', function() {
@@ -245,8 +244,6 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 });
-
-
 
 // Modal and Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -524,16 +521,45 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     // Project data with images and descriptions
     const projectData = {
+        'crossy-road-clone': {
+            title: 'Crossy Road',
+            status: 'Public',
+            images: [
+                'Images/CrossyRoad.png',
+                'Images/CR-Rendering1.png',
+                'Images/CRRendering2.png'
+            ],
+            description: `
+                <p>Crossy Road is a Unity 3D arcade game inspired by the popular mobile game, where players navigate a character across roads, rivers, and obstacles while avoiding traffic and other hazards.</p>
+                
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Dynamic obstacle spawning for endless gameplay</li>
+                    <li>Smooth character movement and jump animations</li>
+                    <li>Level transitions with increasing difficulty</li>
+                    <li>Particle effects for collisions and collectibles</li>
+                    <li>Responsive controls for an engaging player experience</li>
+                </ul>
+                
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>Developed using Unity 3D with C# scripting</li>
+                    <li>Procedural generation for road and obstacle layouts</li>
+                    <li>Physics-based movement and collision detection</li>
+                    <li>Custom shaders and particle systems for visual effects</li>
+                    <li>Optimized for performance on both desktop and mobile platforms</li>
+                </ul>
+                
+                <p>This project showcases my skills in game development, including gameplay mechanics, animation, and performance optimization.</p>
+            `,
+            technologies: ['Unity', 'C#', 'Game Design', '3D Animation', 'Shader Programming']
+        },
         'fintion-banking': {
             title: 'Fintion Banking',
             status: 'Public',
-            
-            
             images: [
                 'Images/FintionHomePage.png',
                 'Images/FintionDB.png'
-                
-                
             ],
             description: `
                 <p>Fintion Banking is a full-stack banking application that provides secure transactions and comprehensive account management features.</p>
@@ -564,11 +590,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'immersive-tech': {
             title: 'Immersive Technologies',
             status: 'Public',
-            
-            
             images: [
                 'Images/ArcadeScene.png',
-                
             ],
             description: `
                 <p>This portfolio showcases my work in Virtual Reality (VR) and Augmented Reality (AR) technologies, demonstrating immersive experiences and interactive applications.</p>
@@ -596,14 +619,11 @@ document.addEventListener('DOMContentLoaded', function() {
         'feedem-now': {
             title: 'Feedem Now',
             status: 'Public',
-            
-            
             images: [
                 'Images/FeedemNowHomePage.png',
                 'Images/FeedemNowLogin.png',
                 'Images/FeedemNowCheckOut.png',
                 'Images/FeedemNowDB.png'
-                
             ],
             description: `
                 <p>Feedem Now is a web-based food ordering platform designed specifically for university students, helping them save time by pre-ordering meals and avoiding long cafeteria lines.</p>
@@ -636,10 +656,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'traffic-lights': {
             title: 'Traffic Lights Simulator',
             status: 'Public',
-            
             images: [
                 'Images/RasPi.jpg',
-                
             ],
             description: `
                 <p>This project implements a practical traffic light control system using a Raspberry Pi, integrating networking concepts to simulate real-world traffic management scenarios.</p>
@@ -664,44 +682,35 @@ document.addEventListener('DOMContentLoaded', function() {
             `,
             technologies: ['Python', 'Raspberry Pi', 'GPIO', 'Socket Programming', 'IoT', 'Hardware Integration']
         },
-        
         'SmartCityAR': {
-            title: 'SmartCityAR',
-            status: 'Public',
-            
+            title: 'SmartCity AR',
+            status: 'Honours Project IN PROGRESS',
             images: [
                 'Images/InfoSmartCityAR.png',
-                
             ],
             description: `
-        <p>SmartCity AR is an interactive Augmented Reality application designed to visualize sustainable urban planning concepts for city infrastructure and public transport improvements.</p>
-
-        <p><strong>Key Features:</strong></p>
-        <ul>
-            <li>AR visualization of proposed city upgrades using 3D models</li>
-            <li>Toggle between sustainable and unsustainable urban layouts</li>
-            <li>Interactive layers to explore traffic, public transport, and pedestrian zones</li>
-            <li>Touch-based object interaction and educational tooltips</li>
-            <li>Designed for urban planners, students, and educators</li>
-        </ul>
-
-        <p><strong>Technical Implementation:</strong></p>
-        <ul>
-            <li>Unity engine with AR Foundation</li>
-            <li>3D modeling with optimized low-poly assets</li>
-            <li>UI system for scene interaction and toggling</li>
-            <li>Surface detection and plane tracking for accurate placement</li>
-            <li>Performance optimized for mobile devices</li>
-        </ul>
-                
+                <p>SmartCity AR is an interactive Augmented Reality application designed to visualize sustainable urban planning concepts for city infrastructure and public transport improvements.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>AR visualization of proposed city upgrades using 3D models</li>
+                    <li>Toggle between sustainable and unsustainable urban layouts</li>
+                    <li>Interactive layers to explore traffic, public transport, and pedestrian zones</li>
+                    <li>Touch-based object interaction and educational tooltips</li>
+                    <li>Designed for urban planners, students, and educators</li>
+                </ul>
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>Unity engine with AR Foundation</li>
+                    <li>3D modeling with optimized low-poly assets</li>
+                    <li>UI system for scene interaction and toggling</li>
+                    <li>Surface detection and plane tracking for accurate placement</li>
+                    <li>Performance optimized for mobile devices</li>
+                </ul>
                 <p>This website demonstrates my front-end development skills and attention to detail in creating engaging user interfaces.</p>
             `,
             technologies: ['Unity', 'AR Foundation', 'C#', '3D Modelling', 'Mobile AR', 'UI/UX Design']
         }
     };
-
-    
-    
 
     // Get all project cards
     const projectCards = document.querySelectorAll('.project-card');
