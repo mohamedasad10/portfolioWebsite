@@ -554,6 +554,38 @@ document.addEventListener('DOMContentLoaded', function() {
             `,
             technologies: ['Unity', 'C#', 'Game Design', '3D Animation', 'Shader Programming']
         },
+        'thearchives': {
+            title: 'The Archives',
+            status: 'Public',
+            images: [
+                'Images/TheArchives_HomePage.png',
+                'Images/TheArchivesGraph.png'
+
+            ],
+            description: `
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Add, edit, and delete items like appliances, tools, or prescriptions</li>
+                    <li>Save item details: name, price, year, tag, notes, and image</li>
+                    <li>Search and filter items by keyword or tag</li>
+                    <li>Visual insights: total spend, category breakdowns, yearly trends</li>
+                    <li>Responsive design for both desktop and mobile use</li>
+                </ul>
+
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>Frontend: React + Vite with Axios for API calls</li>
+                    <li>Backend: Node.js, Express, and MongoDB (Mongoose)</li>
+                    <li>Image fetch via Unsplash API integration</li>
+                    <li>Deployed on Vercel (frontend) and Render (backend)</li>
+                    <li>Custom chart components for data visualization (bar & line graphs)</li>
+                </ul>
+
+                <p>This full-stack app was inspired by real-life memory gaps, offering a simple, searchable archive to track and revisit item-related information.</p>
+
+            `,
+            technologies: ['MERN Stack', 'MongoDB Atlas', 'Unsplash Image API', 'Vercel']
+        },
         'fintion-banking': {
             title: 'Fintion Banking',
             status: 'Public',
